@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <io.dcloud.h52927aa1.Fragment.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bye_burger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/colorstatelist"
+        app:itemTextColor="@color/colorstatelist"
+        app:layout_behavior="@string/bye_burger_bottom_behavior"
+        app:menu="@menu/bottom">
+    </android.support.design.widget.BottomNavigationView>
+    <android.support.v7.widget.Toolbar
+        app:layout_behavior="@string/bye_burger_title_behavior"
+        android:id="@+id/toolbar" app:theme="@style/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/btnRed"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="标题"/>
+    </android.support.v7.widget.Toolbar>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/floatButton"-->
+        <!--app:layout_behavior="@string/bye_burger_float_behavior"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--app:backgroundTint="@color/btnRed"-->
+        <!--android:layout_marginBottom="60dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:rippleColor="@color/red"-->
+        <!--app:borderWidth="0dp"-->
+        <!--app:elevation="6dp"-->
+        <!--app:pressedTranslationZ="12dp"-->
+        <!--android:src="@mipmap/icon_add"-->
+        <!--/>-->
+
+
+    <TextView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/cloud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#ffff"/>
+
+</android.support.design.widget.CoordinatorLayout>

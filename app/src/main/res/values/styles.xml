@@ -1,0 +1,61 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/btnRed</item>
+        <item name="colorAccent">@color/btnRed</item>
+    </style>
+
+    <style name="AppTheme.Base"  parent="Theme.AppCompat">
+        <!--隐藏ActionBar和标题-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--ToolBar的颜色-->
+        <item name="colorPrimary">@color/white</item>
+        <!--状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/btnRed</item>
+        <!--EditText,RadioButton,CheckBox的点击效果颜色-->
+        <item name="colorAccent">@color/btnRed</item>
+
+    </style>
+
+   
+    <style name="marg10">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="toolBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="rlStyle">
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginTop">0.1dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="llStyle">
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginTop">0.1dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="MyHintStyle">
+
+        <item name="android:textColor">@color/baseText</item>
+
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+
+</resources>

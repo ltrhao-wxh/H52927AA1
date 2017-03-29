@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.dcloud.h52927aa1">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 读写内存卡的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".Base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Acticity.MainActivity"></activity>
+        <activity android:name=".Acticity.PeopleMessageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Acticity.AboutAppActivity" />
+        <activity android:name=".Acticity.ApproveActivity" />
+        <activity android:name=".Acticity.ImageDetailActivity" />
+        <activity android:name=".Acticity.LoginActivity" />
+        <activity android:name=".Acticity.MyDoingActivity" />
+        <activity android:name=".Acticity.QuizActivity" />
+        <activity android:name=".Acticity.SomeOneActivity" />
+        <activity android:name=".Acticity.ProgramDynamicActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity android:name=".Acticity.XieyiActivity" />
+        <activity android:name=".Acticity.XuanShangActivity" />
+        <activity android:name=".Acticity.QiangShangAcitivity" />
+        <activity android:name=".Acticity.TiWenActivity" />
+        <activity android:name=".Acticity.HuiDaActivity" />
+        <activity android:name=".Acticity.GuanXiPiaoActivity" />
+        <activity android:name=".Acticity.ZiXunActivity" />
+        <activity android:name=".Acticity.GuanZhuActivity" />
+        <activity android:name=".Acticity.ShouCangActitivy" />
+        <activity android:name=".Acticity.SeetingActivity" />
+        <activity android:name=".Acticity.PassWordActivity">
+
+        </activity>
+    </application>
+
+</manifest>

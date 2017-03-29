@@ -1,0 +1,68 @@
+package io.dcloud.h52927aa1.Utils;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+
+/**
+ * Created by wuxiaohui on 17/3/10.
+ */
+
+public abstract class HttpUtil implements HTTpCallbackListener{
+
+    public static void sendHttpRequest(final String address, final HTTpCallbackListener listener) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                HttpURLConnection connection = null;
+
+                try {
+                    URL url = new URL(address);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setConnectTimeout(8000);
+                    connection.setReadTimeout(8000);
+                    connection.setDoInput(true);
+                    connection.setDoOutput(true);
+                    InputStream is = connection.getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                    StringBuilder response=new StringBuilder();
+                    String line;
+                    while ((line=reader.readLine())!=null) {
+                        response.append(line);
+                    }
+                    if (listener!=null){
+                        //回调onFinish方法
+                        listener.onFinish(response.toString());
+                    }
+                } catch (IOException e) {
+                    if (listener!=null);
+                    //回调onError方法
+                    listener.onError(e);
+                }finally {
+                    if (connection!=null){
+                        connection.disconnect();
+                    }
+                }
+
+            }
+        }).start();
+    }
+
+
+    public  static void sendOkHttpRequest(String address, Callback callback){
+        OkHttpClient client=new OkHttpClient();
+        Request request=new Request.Builder()
+                .url(address)
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
+
+}

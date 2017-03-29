@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="io.dcloud.h52927aa1.Acticity.PassWordActivity">
+
+    <include
+        android:id="@id/include"
+        layout="@layout/activity_base" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="请设置密码并妥善保管" />
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rl_pass"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/clock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pswclock"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_toRightOf="@id/clock1"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="  请再次输入六位密码"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/MyHintStyle">
+
+            <EditText
+                android:layout_marginRight="10dp"
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:password="true"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:digits="1234567890"
+                android:drawableBottom="@drawable/line"
+                android:maxLength="6"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_passs"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rl_pass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pswclock"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_toRightOf="@+id/clock"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="  请再次输入六位数字密码"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/MyHintStyle">
+
+            <EditText
+                android:layout_marginRight="10dp"
+                android:id="@+id/et_passWord"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:password="true"
+                android:digits="1234567890"
+                android:drawableBottom="@drawable/line"
+                android:maxLength="6"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:text="完成"
+        android:background="@drawable/btn_shap"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_passs"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"/>
+</RelativeLayout>

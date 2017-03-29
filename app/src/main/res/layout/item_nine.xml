@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_base" />
+    <LinearLayout
+        android:layout_below="@+id/include"
+        android:id="@+id/ll_head"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher_round"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="叮当"
+            android:textSize="18sp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_program_position"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="项目经理"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_body"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/ll_head">
+        <TextView android:id="@+id/tv_content"
+            android:text="是你图片的数据类型类型也可以是你自定义的类型如果你要使用自定义的你可以重写方去生成自定的"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+
+        <com.jaeger.ninegridimageview.NineGridImageView
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            app:imgGap="4dp"
+            app:showStyle="fill"
+            app:singleImgSize="120dp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_margin="15dp"
+                android:id="@+id/video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@android:color/black">
+
+                <com.universalvideoview.UniversalVideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:uvv_autoRotation="true"
+                    app:uvv_fitXY="true" />
+
+                <com.universalvideoview.UniversalMediaController
+                    android:id="@+id/media_controller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:uvv_scalable="true" />
+
+                <ImageView
+                    android:id="@+id/iv_start"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="刚刚"
+                android:textSize="14sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="评论"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"/>
+
+            <ImageView
+                android:id="@+id/iv_comment_comment_icon"
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/tv_comment"/>
+
+            <TextView
+                android:id="@+id/tv_praise_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="赞"
+                android:layout_marginRight="25dp"
+                android:layout_toLeftOf="@+id/iv_comment_comment_icon"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_praise_praise"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_body"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:id="@+id/iv_praise_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/tv_praise_persons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="XXXXXXXXXXXXXXXXXXXXXXX觉得很赞"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_below="@id/ll_bottom"
+        android:layout_marginTop="15dp"
+        android:id="@+id/et_comment"
+        android:background="@drawable/image_nor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="此处是评论编辑处"/>
+</RelativeLayout>

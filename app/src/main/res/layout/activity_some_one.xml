@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_base" />
+    <RelativeLayout
+        android:id="@+id/rl_someone"
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="200dp"
+        android:layout_below="@+id/include"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/iv_someone_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:id="@+id/iv_someone_laoshu"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/iv_someone_head"
+            android:layout_toLeftOf="@+id/iv_someone_head"/>
+        <TextView
+            android:id="@+id/someone_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新闻"
+            android:textSize="10sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:background="@color/btnRed"
+            android:layout_toRightOf="@+id/iv_someone_laoshu"
+            android:layout_below="@id/iv_someone_head"/>
+        <TextView
+            android:id="@+id/someone_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="huangwei"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/someone_title"
+            android:layout_below="@+id/iv_someone_head"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关系票"
+            android:textSize="10sp"
+            android:layout_alignRight="@+id/someone_title"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:text="1111111111"
+            android:layout_alignLeft="@id/someone_name"
+            android:layout_below="@id/someone_title"
+            android:layout_marginTop="12dp"
+            android:maxLines="8"
+            android:id="@+id/textView" />
+
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabSelectedTextColor="?attr/colorPrimary"
+        app:tabIndicatorColor="?attr/colorPrimary"     />
+        <!--app:tabTextAppearance="@style/tab_Text"-->
+
+    <include layout="@layout/base_toolbar_shadow"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
