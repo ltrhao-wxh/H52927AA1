@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#999999</color>
+    <color name="green">#68dc65</color>
+    <color name="red">#ae0505</color>
+    <color name="blue">#1F60A3</color>
+    <color name="btnRed">#ff5959</color>
+    <color name="nameColor">#505F90</color>
+
+
+    <!-- tip 和 loading 的背景颜色 -->
+    <color name="core_back">#fafbfb</color>
+    <color name="baseBack">#EEEFF3</color>
+    <color name="baseText">#A3A3A3</color>
+</resources>
