@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <RelativeLayout
+        android:background="@color/white"
         android:id="@+id/rl_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +33,6 @@
             android:text="23"
             android:textColor="#F7AC3F"
             android:textSize="11sp" />
-
 
 
         <LinearLayout
@@ -88,11 +86,11 @@
         <!--分享-->
         <ImageView
             android:id="@+id/iv_share"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="17dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:background="@drawable/share_shap" />
 
         <TextView
             android:id="@+id/tv_content"
@@ -101,7 +99,7 @@
             android:layout_below="@+id/tv_name"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/iv_head2"
-            android:text="XXXXXX"
+            android:text="小熊去哪了"
             android:textSize="15sp" />
 
         <io.dcloud.h52927aa1.Weiget.GridViewForScroll
@@ -123,18 +121,125 @@
             android:layout_alignLeft="@+id/tv_content"
             android:layout_below="@+id/gv"
             android:layout_marginTop="6dp"
-            android:drawableRight="@mipmap/afr"
-            android:text="啊啊啊啊啊"
+            android:text="一天前"
             android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_time"
+            android:layout_below="@id/tv_time"
+            android:layout_marginTop="4dp"
+            android:text="呼和浩特市明泽广场"
+            android:textColor="@color/blue" />
 
 
     </RelativeLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:layout_below="@id/rl_name"
-        android:background="#C5C5C5" />
 
+    <LinearLayout
+        android:layout_marginTop="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_name"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/rl_dianzan"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_dianzan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点赞" />
+
+            <TextView
+                android:id="@+id/tv_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_dianzan"
+                android:text="123456" />
+
+            <TextView
+                android:layout_width="0.1dp"
+                android:layout_height="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_width="1dp"
+                android:layout_height="10dp" />
+            <TextView
+                android:id="@+id/tv_dianzan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏" />
+
+            <TextView
+                android:id="@+id/tv_shoucang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_dianzan1"
+                android:text="123456" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_dianzan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="悬赏"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tv_xuanshang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_dianzan2"
+                android:text="123456" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_dianzan3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="咨询" />
+
+            <TextView
+                android:id="@+id/tv_zixun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_dianzan3"
+                android:text="123456" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
 
 </RelativeLayout>

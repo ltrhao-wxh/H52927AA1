@@ -2,6 +2,9 @@ package io.dcloud.h52927aa1.Base;
 
 import android.app.Application;
 
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
 import org.xutils.x;
 
 /**
@@ -9,7 +12,6 @@ import org.xutils.x;
  */
 
 public class MyApplication extends Application{
-
     @Override
     public void onCreate() {
         super.onCreate();

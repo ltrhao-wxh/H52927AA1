@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/rl_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/white">
 
         <ImageView
@@ -29,7 +29,7 @@
             android:layout_gravity="center_vertical"
             android:gravity="center_horizontal"
             android:text="登陆"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
@@ -47,6 +47,7 @@
             android:background="@color/white">
 
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:id="@+id/myll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,6 +130,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:layout_marginTop="2dp"
                     android:id="@+id/textView7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -150,6 +152,7 @@
                 android:layout_marginRight="50dp"
                 android:background="@drawable/btn_shap"
                 android:text="登陆"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/white" />
 
 

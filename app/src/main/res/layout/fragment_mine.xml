@@ -163,49 +163,82 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/my_xuanshang"
+        <RelativeLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/xuanshang"
-            android:gravity="center"
-            android:text="我的悬赏"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/my_xuanshang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/xuanshang"
+                android:gravity="center"
+                android:text="我的悬赏"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/my_qiangshang"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/qiangshang"
-            android:gravity="center"
-            android:text="我的抢赏"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/my_tiwen"
+        <RelativeLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/tiwen"
-            android:gravity="center"
-            android:text="我的提问"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/my_qiangshang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/qiangshang"
+                android:gravity="center"
+                android:text="我的抢赏"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/my_huida"
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/huida"
-            android:gravity="center"
-            android:text="我的回答"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/my_tiwen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/tiwen"
+                android:gravity="center"
+                android:text="我的提问"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/my_huida"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/huida"
+                android:gravity="center"
+                android:text="我的回答"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
 
     </LinearLayout>
 
@@ -215,7 +248,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/rl_guanxipiao"
         android:layout_marginTop="0.1dp"
-        android:background="@color/white"
+        android:background="@drawable/item_shap"
         android:gravity="center_vertical">
 
         <TextView
@@ -239,7 +272,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/rl_zixun"
         android:layout_marginTop="0.1dp"
-        android:background="@color/white"
+        android:background="@drawable/item_shap"
         android:gravity="center_vertical">
 
         <TextView
@@ -262,7 +295,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/rl_guanzhu"
         android:layout_marginTop="0.1dp"
-        android:background="@color/white"
+        android:background="@drawable/item_shap"
         android:gravity="center_vertical">
 
         <TextView
@@ -285,7 +318,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/rl_shoucang"
         android:layout_marginTop="0.1dp"
-        android:background="@color/white"
+        android:background="@drawable/item_shap"
         android:gravity="center_vertical">
 
         <TextView
@@ -308,7 +341,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/rl_renzheng"
         android:layout_marginTop="0.1dp"
-        android:background="@color/white"
+        android:background="@drawable/item_shap"
         android:gravity="center_vertical">
 
         <TextView
@@ -331,7 +364,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/ll_group"
         android:layout_marginTop="0.1dp"
-        android:background="@color/white"
+        android:background="@drawable/item_shap"
         android:gravity="center_vertical">
 
         <TextView

@@ -20,18 +20,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Acticity.MainActivity"></activity>
-        <activity android:name=".Acticity.PeopleMessageActivity">
+        <activity android:name=".Acticity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Acticity.PeopleMessageActivity">
+
+        </activity>
         <activity android:name=".Acticity.AboutAppActivity" />
         <activity android:name=".Acticity.ApproveActivity" />
         <activity android:name=".Acticity.ImageDetailActivity" />
-        <activity android:name=".Acticity.LoginActivity" />
+        <activity android:name=".Acticity.LoginActivity" >
+
+        </activity>
         <activity android:name=".Acticity.MyDoingActivity" />
         <activity android:name=".Acticity.QuizActivity" />
         <activity android:name=".Acticity.SomeOneActivity" />
