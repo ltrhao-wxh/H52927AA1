@@ -21,6 +21,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URI;
 
+import io.dcloud.h52927aa1.Base.Constants;
+
 /**
  * Created by wuxiaohui on 17/3/27.
  */
@@ -48,12 +50,14 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
         switch (errorCode) {
             case BaseResp.ErrCode.ERR_OK:
                 //用户同意
-                String code = ((SendAuth.Resp) baseResp).code;
+                SendAuth.Resp sendResp = (SendAuth.Resp) baseResp;
+                String code = sendResp.code;
                 L.e(code);
-//                getAccessToken(code);
+                getAccessToken(code);
                 break;
             case BaseResp.ErrCode.ERR_AUTH_DENIED:
                 //用户拒绝
+
                 break;
             case BaseResp.ErrCode.ERR_USER_CANCEL:
                 //用户取消
@@ -65,7 +69,8 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
     }
 
     private String getAccessToken(String code) {
-        String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code";
+        String url="https://api.weixin.qq.com/sns/oauth2/access_token?appid="+ Constants.APPID+"&secret=SECRET&code="+code+"&grant_type=authorization_code";
+        //String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code";
         URI uri = URI.create(url);
         HttpClient client = new DefaultHttpClient();
         HttpGet get = new HttpGet(uri);

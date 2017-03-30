@@ -30,6 +30,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import io.dcloud.h52927aa1.Base.Constants;
 import io.dcloud.h52927aa1.Bean.Phone;
 import io.dcloud.h52927aa1.R;
 import io.dcloud.h52927aa1.network.RequestAPI;
@@ -53,26 +54,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private List<Phone> list;
     private ImageView weChat, backFinish;
 
-    //app合法id
-    private static final String APP_ID = "wxb3d041ad9ed1c817";
 
     //IWXAPI是第三方app和微信通信的openapi接口
     private IWXAPI api;
 
-    private void regToWx() {
-        //通过WXAPIFactory工厂，获取IWXAPI实例
-        api = WXAPIFactory.createWXAPI(this, APP_ID,true);
-
-        //将应用的appid注册到微信
-        api.registerApp(APP_ID);
-
-    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //通过WXAPIFactory工厂，获取IWXAPI实例
+        api = WXAPIFactory.createWXAPI(this, Constants.APPID,true);
+        //将应用的appid注册到微信
+        api.registerApp(Constants.APPID);
         init();
         initOkHttp();
 
@@ -164,7 +159,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      */
 
     private void weCahtLogin() {
-        regToWx();
 
         final SendAuth.Req req = new SendAuth.Req();
 
@@ -176,9 +170,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //向微信发送请求
         api.sendReq(req);
-
-
-
 
     }
 
