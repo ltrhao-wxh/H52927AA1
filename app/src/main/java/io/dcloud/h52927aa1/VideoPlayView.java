@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import cn.demo.videolist.media.IjkVideoView;
+import io.dcloud.h52927aa1.media.IjkVideoView;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 /**
